@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=E:\src\flutter
-FLUTTER_APPLICATION_PATH=E:\projetosFrutter\get_your_giphy
+FLUTTER_APPLICATION_PATH=E:\fluttergit\get_your_giphy
 FLUTTER_TARGET=lib\main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build\ios

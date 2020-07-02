@@ -15,6 +15,14 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData(
+          inputDecorationTheme: InputDecorationTheme(
+        enabledBorder:
+            OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+        focusedBorder:
+            OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+        hintStyle: TextStyle(color: Colors.white),
+      )),
       initialRoute: initialRoute,
       getPages: Nav.routes,
     );
