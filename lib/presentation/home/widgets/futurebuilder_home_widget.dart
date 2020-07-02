@@ -22,7 +22,7 @@ class FutureBuilderHomeWidget extends GetView<HomeController> {
                       crossAxisCount: 2,
                       crossAxisSpacing: 10.0,
                       mainAxisSpacing: 10.0),
-                    itemCount: 4,
+                    itemCount: controller.gifs.data.length,
                   itemBuilder: (_, index) {
                    
                     return GestureDetector(
