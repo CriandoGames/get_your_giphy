@@ -4,6 +4,8 @@ import 'package:get_your_giphy/presentation/gif_pages/controllers/gif.controller
 class GifControllerBinding extends Bindings {
   @override
   dependencies() {
-    Get.lazyPut<GifController>(() => GifController());
+    Get.lazyPut<GifController>(() => GifController(
+      screenArgs: Get.arguments
+    ));
   }
 }

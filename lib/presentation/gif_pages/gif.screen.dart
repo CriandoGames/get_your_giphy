@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_your_giphy/presentation/gif_pages/controllers/gif.controller.dart';
 
-class GifScreen extends GetView {
-  final String title;
-  final String url;
-  GifScreen({@required this.title, @required this.url});
+class GifScreen extends GetView<GifController> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(controller.title),
         backgroundColor: Colors.black,
       ),
       backgroundColor: Colors.black,
       body: Center(
-        child: Image.network(url),
+        child: Image.network(controller.url)
       ),
     );
   }

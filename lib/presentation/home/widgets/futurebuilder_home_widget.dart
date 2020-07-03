@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_your_giphy/infrastructure/navigation/routes.dart';
-import 'package:get_your_giphy/presentation/gif_pages/gif.screen.dart';
 import 'package:get_your_giphy/presentation/home/controllers/home.controller.dart';
 import 'package:get_your_giphy/presentation/home/widgets/card_home_widget.dart';
 
@@ -42,7 +41,11 @@ class FutureBuilderHomeWidget extends GetView<HomeController> {
                               fit: BoxFit.cover,
                             ),
                             onTap: () {
-                              Get.toNamed(Routes.Gif);
+                              Get.toNamed(Routes.Gif, arguments: {
+                                'title': controller.gifs.data[index].title,
+                                'url': controller
+                                    .gifs.data[index].images.fixedHeight.url
+                              });
                             },
                           );
                         } else {
