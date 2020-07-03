@@ -22,11 +22,12 @@ class HomeScreen extends GetView<HomeController> {
                 padding: const EdgeInsets.all(16.0),
                 child: TextFieldHomeWidget(
                   label: "Pesquise aqui!",
+                  onChange: controller.seachGifs,
                 ),
               ),
               Expanded(
                 child: FutureBuilderHomeWidget(
-                  
+
                 ),
               ),
             ],

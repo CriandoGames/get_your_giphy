@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class TextFieldHomeWidget extends StatelessWidget {
   final String label;
+  final Function onChange;
 
-  TextFieldHomeWidget({this.label});
+  TextFieldHomeWidget({this.label, this.onChange});
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -16,6 +17,7 @@ class TextFieldHomeWidget extends StatelessWidget {
       ),
       style: TextStyle(color: Colors.white, fontSize: 18),
       textAlign: TextAlign.center,
+      onChanged: onChange,
     );
   }
 }
