@@ -10,6 +10,12 @@ class GifScreen extends GetView<GifController> {
       appBar: AppBar(
         title: Text(controller.title),
         backgroundColor: Colors.black,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.share),
+            onPressed: controller.share,
+          ),
+        ],
       ),
       backgroundColor: Colors.black,
       body: Center(

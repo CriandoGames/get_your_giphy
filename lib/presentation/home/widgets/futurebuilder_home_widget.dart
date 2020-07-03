@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:get_your_giphy/infrastructure/navigation/routes.dart';
 import 'package:get_your_giphy/presentation/home/controllers/home.controller.dart';
 import 'package:get_your_giphy/presentation/home/widgets/card_home_widget.dart';
+import 'package:share/share.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class FutureBuilderHomeWidget extends GetView<HomeController> {
   @override
@@ -34,18 +36,20 @@ class FutureBuilderHomeWidget extends GetView<HomeController> {
                             controller.seach.value == "" ||
                             index < controller.gifs.data.length) {
                           return GestureDetector(
-                            child: Image.network(
-                              controller
-                                  .gifs.data[index].images.fixedHeight.url,
-                              height: Get.height * 0.2,
-                              fit: BoxFit.cover,
-                            ),
+                            child: FadeInImage.memoryNetwork(
+                                placeholder: kTransparentImage,
+                                image: controller
+                                    .gifs.data[index].images.fixedHeight.url, height: Get.height * 0.2, fit: BoxFit.cover,),
                             onTap: () {
                               Get.toNamed(Routes.Gif, arguments: {
                                 'title': controller.gifs.data[index].title,
                                 'url': controller
                                     .gifs.data[index].images.fixedHeight.url
                               });
+                            },
+                            onLongPress: () {
+                              Share.share(controller
+                                  .gifs.data[index].images.fixedHeight.url);
                             },
                           );
                         } else {
