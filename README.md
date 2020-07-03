@@ -5,6 +5,22 @@
 
 gif finder using GetX state manager, named routes. example above.
 
+Clone here : https://github.com/CriandoGames/get_your_giphy.git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
