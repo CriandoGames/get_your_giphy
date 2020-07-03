@@ -1,6 +1,9 @@
 # get_your_giphy
 
-A new Flutter application.
+![](exemple.gif)
+
+
+gif finder using GetX state manager, named routes. example above.
 
 ## Getting Started
 
