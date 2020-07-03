@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_your_giphy/infrastructure/navigation/routes.dart';
+import 'package:get_your_giphy/presentation/gif_pages/gif.screen.dart';
 import 'package:get_your_giphy/presentation/home/controllers/home.controller.dart';
 import 'package:get_your_giphy/presentation/home/widgets/card_home_widget.dart';
 
@@ -39,6 +41,9 @@ class FutureBuilderHomeWidget extends GetView<HomeController> {
                               height: Get.height * 0.2,
                               fit: BoxFit.cover,
                             ),
+                            onTap: () {
+                              Get.toNamed(Routes.Gif);
+                            },
                           );
                         } else {
                           return FillCard(
